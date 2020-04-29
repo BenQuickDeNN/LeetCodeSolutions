@@ -2,6 +2,7 @@
 
 using namespace std;
 
+/* 统计数组中逆序对的个数 */
 class Solution {
     int mergeSort(vector<int>& nums, vector<int>& tmp, const int& l, const int& r)
     {
