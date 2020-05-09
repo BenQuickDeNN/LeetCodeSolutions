@@ -7,7 +7,7 @@ class Solution {
         {
             sum += (m % 10) * (m % 10);
             m /= 10;
-        }
+        }                                                                                                                                      
         return sum;
     }
 public:
