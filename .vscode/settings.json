@@ -1,8 +1,12 @@
 {
     "files.associations": {
+        "*.tpp": "cpp",
+        "*.cu": "cpp",
+        "*.tcu": "cpp",
         "xstring": "cpp",
         "vector": "cpp",
         "queue": "cpp",
-        "algorithm": "cpp"
+        "algorithm": "cpp",
+        "stack": "cpp"
     }
 }
