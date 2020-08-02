@@ -3,14 +3,15 @@
 #include <algorithm>
 #include <climits>
 using namespace std;
-int dfs(const vector<int>& ddl, const vector<int>& cost,
- vector<bool> & path, const int& idx, const int & day)
+int dfs(const vector<int> &ddl, const vector<int> &cost,
+        vector<bool> &path, const int &idx, const int &day)
 {
     if (path[idx])
         return 0;
     path[idx] = true;
     int ret = cost[idx] + day - ddl[idx];
-    if (ret < 0) ret = 0;
+    if (ret < 0)
+        ret = 0;
     int minCost = INT_MAX;
     bool ok = false;
     for (int i = 0; i < ddl.size(); i++)
@@ -18,7 +19,7 @@ int dfs(const vector<int>& ddl, const vector<int>& cost,
         if (!path[i])
         {
             ok = true;
-            minCost = min(minCost, dfs(ddl, cost, path,i,day + cost[idx]));
+            minCost = min(minCost, dfs(ddl, cost, path, i, day + cost[idx]));
         }
     }
     if (!ok)
@@ -44,5 +45,6 @@ int main()
     for (int i = 0; i < n; i++)
         minCost = min(minCost, dfs(ddl, cost, path, i, 0));
     cout << minCost << endl;
+    // 还可以用状态转换
     return 0;
 }
