@@ -26,5 +26,6 @@ public:
             p = p->next;
         }
         return true;
+        // 还可以用快慢指针法
     }
 };
